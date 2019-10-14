@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 09-10-2019 a las 14:11:05
--- Versión del servidor: 10.1.36-MariaDB
--- Versión de PHP: 5.6.38
+-- Servidor: localhost
+-- Tiempo de generación: 15-10-2019 a las 01:31:17
+-- Versión del servidor: 10.4.8-MariaDB
+-- Versión de PHP: 7.3.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -100,6 +100,31 @@ INSERT INTO `usuarios` (`usr_id`, `usr_nombre`, `usr_password`, `usr_email`) VAL
 (1, 'pepe', 'pepe', 'pepe@pepe.com'),
 (2, 'juan', 'juan', 'juan@juan.com');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ventas`
+--
+
+CREATE TABLE `ventas` (
+  `venta_id` int(11) NOT NULL,
+  `usr_id` int(11) NOT NULL,
+  `producto_id` int(11) NOT NULL,
+  `amount` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `ventas`
+--
+
+INSERT INTO `ventas` (`venta_id`, `usr_id`, `producto_id`, `amount`) VALUES
+(1, 1, 1, 1),
+(2, 1, 1, 1),
+(3, 1, 4, 2),
+(4, 1, 4, 2),
+(5, 1, 4, 4),
+(6, 1, 4, 4);
+
 --
 -- Índices para tablas volcadas
 --
@@ -131,6 +156,12 @@ ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`usr_id`);
 
 --
+-- Indices de la tabla `ventas`
+--
+ALTER TABLE `ventas`
+  ADD PRIMARY KEY (`venta_id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -151,6 +182,12 @@ ALTER TABLE `productos`
 --
 ALTER TABLE `usuarios`
   MODIFY `usr_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `ventas`
+--
+ALTER TABLE `ventas`
+  MODIFY `venta_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas
