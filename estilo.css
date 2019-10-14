@@ -1,0 +1,36 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+h3{
+	font-family: "Arial";
+	font-size: 15pt;
+	letter-spacing: 2px;
+	width: 100px;
+	background: green;
+	padding: 16px;
+	
+
+
+}
+
+
+#container{
+	background: #7621AE;
+	width: 100%;
+	height: 100vh;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+#conrtainer{
+	background: #fff;
+	width: 500px;
+	padding: 10px;
+
+}
